@@ -1,0 +1,12 @@
+p {
+  line-height: 1.75em;
+}
+
+div {
+  width: 420px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  font-size: 12px;
+  background-color: #eee;
+  box-shadow: 5px 5px 5px #ddd;
+}
