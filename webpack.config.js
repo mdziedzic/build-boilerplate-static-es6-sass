@@ -1,14 +1,7 @@
 require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin('./style/style.css');
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: `${__dirname}/source/index.html`,
-  filename: 'index.html',
-  inject: 'body',
-});
-
 const processHTMLPages = require('./processHTMLHelper.js');
 const plugins = [
   extractCSS,
