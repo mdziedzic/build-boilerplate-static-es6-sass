@@ -1,7 +1,7 @@
 {
   "name": "static-es6-sass-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for building static app with support for ES6 and SASS",
+  "description": "Boilerplate for building static app with ES6 and SASS",
   "license": "ISC",
   "keywords": [],
   "author": {
@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "prod": "webpack -p"
+    "build": "rm -rf build & webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
