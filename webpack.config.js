@@ -45,6 +45,7 @@ module.exports = {
 
   plugins: [
     extractCSS,
+    // TODO: why styles.css?
     new ExtractTextPlugin('styles.scss'),
     HTMLWebpackPluginConfig,
     new HtmlWebpackPlugin({
