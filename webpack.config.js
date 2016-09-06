@@ -1,13 +1,10 @@
-const webpack = require('webpack');
+require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin('./style/style.css');
-
-
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/source/index.html',
+  template: `${__dirname}/source/index.html`,
   filename: 'index.html',
   inject: 'body',
 });
@@ -26,19 +23,10 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['babel'],
       },
-      // {
-      //   test: /\.css$/,
-      //   loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
-      // },
-      // {
-      //   test: /\.scss$/,
-      //   loaders: ['sass'],
-      // },      
-      // {
-      //   test: /\.css$/,
-      //   loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
-      // },
-      { test: /\.scss$/i, loader: extractCSS.extract(['css', 'sass']) },
+      {
+        test: /\.scss$/i,
+        loader: extractCSS.extract(['css', 'sass']),
+      },
     ],
   },
 
@@ -57,7 +45,7 @@ module.exports = {
 
   plugins: [
     extractCSS,
-    new ExtractTextPlugin("styles.scss"),
+    new ExtractTextPlugin('styles.scss'),
     HTMLWebpackPluginConfig,
     new HtmlWebpackPlugin({
       filename: 'page2.html',
@@ -69,12 +57,5 @@ module.exports = {
       template: 'source/more-html/page3.html',
       inject: 'body',
     }),
-    // new CopyWebpackPlugin([
-    //   {
-    //     context: `${__dirname}/source`,
-    //     from: '**/*.html',
-    //     to: `${__dirname}/build`,
-    //   },
-    // ]),
   ],
 };
