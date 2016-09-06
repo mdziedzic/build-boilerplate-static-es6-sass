@@ -31,4 +31,15 @@ div {
       color: $red;
     }
   }
+
+  img {
+    margin-bottom: 10px;
+    border: 10px solid #fff;
+    box-shadow: 5px 5px 5px #999;
+  }
+
+  cite {
+    margin-left: 10px;
+    color: #888;
+  }
 }
