@@ -1,5 +1,5 @@
 {
-  "name": "static-es6-sass-boilerplate",
+  "name": "static-es6-sass-webpack-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for building static app with ES6 and SASS",
   "license": "ISC",
