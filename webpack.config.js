@@ -9,13 +9,20 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body',
 });
 
-module.exports = {
+const processHTMLPages = require('./processHTMLHelper.js');
+const pages = processHTMLPages();
+pages.shift();
+const plugins = [
+  HTMLWebpackPluginConfig,
+  extractCSS,
+  new ExtractTextPlugin('styles.scss'),
+].concat(pages);
 
+module.exports = {
   entry: [
-    // 'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:8080',
     './source/index.js',
   ],
-
   module: {
     loaders: [
       {
@@ -29,34 +36,15 @@ module.exports = {
       },
     ],
   },
-
   resolve: {
     extensions: ['', '.js'],
   },
-
   output: {
     path: `${__dirname}/build`,
     filename: 'index.js',
   },
-
   devServer: {
     contentBase: './build',
   },
-
-  plugins: [
-    extractCSS,
-    // TODO: why styles.css?
-    new ExtractTextPlugin('styles.scss'),
-    HTMLWebpackPluginConfig,
-    new HtmlWebpackPlugin({
-      filename: 'page2.html',
-      template: 'source/page2.html',
-      inject: 'body',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'more-html/page3.html',
-      template: 'source/more-html/page3.html',
-      inject: 'body',
-    }),
-  ],
+  plugins,
 };
