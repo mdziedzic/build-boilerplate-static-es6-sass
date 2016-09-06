@@ -1,13 +1,29 @@
-$blue: #00f;
-$green: #0f0;
 $red: #f00;
+$green: #090;
+$blue: #00f;
+
+p {
+  line-height: 1.75em;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: $blue;
+}
 
 div {
-
+  width: 420px;
+  margin: 0 auto;
   margin-top: 30px;
+  padding: 20px 40px;
+  font-size: 12px;
+  background-color: #eee;
+  box-shadow: 5px 5px 5px #ddd;
 
   h1 {
-    color: $blue;
+    color: $green;
   }
 
   p {

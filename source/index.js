@@ -1,4 +1,3 @@
-import './style/style.css';
 import './style/style.scss';
 
 const saySomething = (something) => {
