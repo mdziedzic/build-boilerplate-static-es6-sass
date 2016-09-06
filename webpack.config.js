@@ -10,13 +10,10 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 const processHTMLPages = require('./processHTMLHelper.js');
-const pages = processHTMLPages();
-pages.shift();
 const plugins = [
-  HTMLWebpackPluginConfig,
   extractCSS,
   new ExtractTextPlugin('styles.scss'),
-].concat(pages);
+].concat(processHTMLPages());
 
 module.exports = {
   entry: [
