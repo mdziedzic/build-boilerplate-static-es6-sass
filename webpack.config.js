@@ -31,14 +31,14 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['', '.js'],
+    extensions: ['', '.js', '.es6'],
   },
   output: {
     path: `${__dirname}/build`,
     filename: 'index.js',
   },
   devServer: {
-    contentBase: './build',
+    contentBase: `${__dirname}/build`,
   },
   plugins,
 };
