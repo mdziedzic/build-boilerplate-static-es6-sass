@@ -1,12 +1,11 @@
 require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const processHTMLPages = require('./processHTMLHelper.js');
 
 const extractCSS = new ExtractTextPlugin('./style/style.css');
-const processHTMLPages = require('./processHTMLHelper.js');
 const plugins = [
   extractCSS,
-  new ExtractTextPlugin('styles.scss'),
   new CopyWebpackPlugin([{
     from: `${__dirname}/source/images`,
     to: `${__dirname}/build/images`,
