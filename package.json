@@ -1,7 +1,7 @@
 {
-  "name": "static-es6-sass-webpack-boilerplate",
+  "name": "build-boilerplate-static-es6-sass",
   "version": "1.0.0",
-  "description": "Boilerplate for building static app with ES6 and SASS",
+  "description": "Boilerplate for building static app/site with ES6 and SASS",
   "license": "ISC",
   "keywords": [],
   "author": {
