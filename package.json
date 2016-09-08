@@ -11,7 +11,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "rm -rf build & webpack -p",
+    "prebuild": "rm -rf build",
+    "build": "webpack -p",
     "postbuild": "gulp"
   },
   "devDependencies": {
