@@ -13,7 +13,7 @@
     "start": "webpack-dev-server",
     "prebuild": "rm -rf build",
     "build": "webpack -p",
-    "postbuild": "gulp"
+    "postbuild": "gulp images --compress"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
@@ -24,11 +24,13 @@
     "fs": "0.0.1-security",
     "glob": "^7.0.6",
     "gulp": "^3.9.1",
+    "gulp-if-else": "^1.0.3",
     "gulp-imagemin": "^3.0.3",
     "html-webpack-plugin": "^2.22.0",
     "node-sass": "^3.9.0",
     "sass-loader": "^4.0.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.1"
+    "webpack-dev-server": "^1.15.1",
+    "yargs": "^5.0.0"
   }
 }
