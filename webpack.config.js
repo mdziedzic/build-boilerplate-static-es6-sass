@@ -23,6 +23,10 @@ module.exports = {
         test: /\.scss$/i,
         loader: extractCSS.extract(['css', 'sass']),
       },
+      {
+        test: /\.css$/,
+        loader: extractCSS.extract(['css']),
+      },
     ],
   },
   resolve: {

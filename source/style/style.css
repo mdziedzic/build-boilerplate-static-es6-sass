@@ -1,0 +1,4 @@
+h1 {
+  text-decoration: underline overline;
+  color: red; /* scss green should take precedence */
+}
