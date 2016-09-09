@@ -3,13 +3,13 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = () => {
-  const realContentFolderPath = `${fs.realpathSync(`${__dirname}/source/`)}/`;
-  const pages = glob.sync(`${__dirname}/source/**/*.html`);
+  const sourcePath = `${fs.realpathSync(`${__dirname}/source/`)}/`;
+  const htmlDocuments = glob.sync(`${__dirname}/source/**/*.html`);
 
-  return pages.map(page => {
-    const filename = page.replace(realContentFolderPath, '');
+  return htmlDocuments.map(document => {
+    const filename = document.replace(sourcePath, '');
     return new HtmlWebpackPlugin({
-      template: page,
+      template: document,
       filename,
       hash: true,
     });
