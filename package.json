@@ -1,7 +1,7 @@
 {
   "name": "build-boilerplate-static-es6-sass",
   "version": "1.0.0",
-  "description": "Boilerplate for building static app/site with ES6 and SASS",
+  "description": "Boilerplate for building a static app/website with ES6 and SASS",
   "license": "MIT",
   "keywords": [],
   "author": {
