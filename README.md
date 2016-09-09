@@ -1,4 +1,4 @@
-# Static ES6/SASS Boilerplate
+# Boilerplate for building static app/site with ES6 and SASS
 
 ## My hovercraft is full of eels
 
