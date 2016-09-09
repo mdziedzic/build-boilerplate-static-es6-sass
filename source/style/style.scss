@@ -1,6 +1,7 @@
 $red: #f00;
 $green: #090;
 $blue: #00f;
+$radius: 30px;
 
 p {
   line-height: 1.75em;
@@ -21,6 +22,7 @@ div {
   font-size: 12px;
   background-color: #eee;
   box-shadow: 5px 5px 5px #ccc;
+  border-radius: $radius;
 
   h1 {
     color: $green;
@@ -42,4 +44,8 @@ div {
     margin-left: 10px;
     color: #888;
   }
+}
+
+a {
+    display: flex;
 }

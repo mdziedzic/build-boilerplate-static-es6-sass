@@ -2,7 +2,7 @@
   "name": "build-boilerplate-static-es6-sass",
   "version": "1.0.0",
   "description": "Boilerplate for building static app/site with ES6 and SASS",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [],
   "author": {
     "name": "Michael Dziedzic",
@@ -16,6 +16,7 @@
     "postbuild": "gulp images --compress"
   },
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
@@ -28,6 +29,7 @@
     "gulp-imagemin": "^3.0.3",
     "html-webpack-plugin": "^2.22.0",
     "node-sass": "^3.9.0",
+    "postcss-loader": "^0.13.0",
     "sass-loader": "^4.0.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1",
