@@ -61,7 +61,7 @@ Please use the [issue tracker](https://github.com/mdziedzic/build-boilerplate-st
 
 # Author
 
-Michael Dziedzic ([micaheldziedzic.com](http://michaeldziedzic.com))
+Michael Dziedzic ([michaeldziedzic.com](http://michaeldziedzic.com))
 
 # License
 
