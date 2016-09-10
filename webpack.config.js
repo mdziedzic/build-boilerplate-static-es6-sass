@@ -35,7 +35,7 @@ module.exports = {
     filename: 'index.js',
   },
   devServer: {
-    contentBase: `${__dirname}/build`,
+    contentBase: `${__dirname}/source`,
   },
   plugins,
 };
