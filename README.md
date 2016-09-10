@@ -27,7 +27,7 @@ npm install
 
 ## Development
 
-Sample files are included in `source`. These files are meant to be replaced. The only constraint is that there must be a `source/index.js` and `source/index.html` file. Place all other files  inside `source` (nested sub-directories allowed).
+Sample files are included in `source`. These files are meant to be replaced. The only constraint is that there must be a `source/index.js` file. Place all other files  inside `source` (nested sub-directories allowed).
 
 `npm run start` to start the dev-server and view site at: `http://localhost:8080`. As files are edited in `source` the browser will update.
 
