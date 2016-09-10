@@ -8,9 +8,9 @@ This project was created to enable the easy, setup-free use of ES6 and SASS whil
 
 - Dev-server to aid development by automatically refreshing the browser whenever an edit is made to any of the source files.
 - Build script that:
-  - Minifies, concatenates, and bundles all JavaScript and CSS files.
   - Converts all ES6 to browser friendly ES5.
   - Converts SASS to CSS and adds vendor prefixes to CSS rules.
+  - Minifies, concatenates, and bundles all JavaScript and CSS files.
   - Compresses images.
 
 # Installation
@@ -27,9 +27,9 @@ npm install
 
 ## Development
 
-A sample static website is included in `source`. These files are meant to be replaced by your files. The only constraint is that there must be a `source/index.js` and `source/index.html` file. The rest of your files can be arranged in a directory structure within `source` to your liking.
+Sample files are included in `source`. These files are meant to be replaced by your files. The only constraint is that there must be a `source/index.js` and `source/index.html` file. The rest of your files can be arranged in a directory structure within `source` to your liking.
 
-`npm run start` to start up the dev-server. You can view the site in a browser at: `http://localhost:8080`. As you edit the files in `source` your browser will be updated.
+`npm run start` to start up the dev-server. View your site as you develop in a browser at: `http://localhost:8080`. As you edit the files in `source` your browser will be updated.
 
 ## Build
 
@@ -43,7 +43,7 @@ This project uses Webpack which relies on a dependency graph. What this means as
 
 ## HTML and images
 
-You don't need to do anything for the HTML and image files apart from placing them somewhere in `source`. (Obviously images must be referenced by the HTML files and all HTML files must be accessible via `index.html`).
+You don't need to do anything to your HTML and image files apart from placing them somewhere in `source`. (Obviously images must be referenced by the HTML files and all HTML files must be accessible via `index.html`).
 
 ## Image Compression
 
