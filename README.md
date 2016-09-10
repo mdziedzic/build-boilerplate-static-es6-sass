@@ -49,12 +49,16 @@ You don't need to do anything for the HTML and image files apart from placing th
 
 The build script compresses the images. If you do not want the images to be compressed when using `npm run build`, simply remove the `--compress` flag in the `postbuild` script in `package.json`.
 
-## Contributing
+## Supported Browsers
 
-### Bug Reports & Feature Requests
+Use the `browserslist` file to list what browsers your site supports. This affects what vendor prefixes get applied to your CSS, among other things. (See [https://github.com/ai/browserslist](https://github.com/ai/browserslist) for more information on how to use this file).
+
+# Contributing
+
+## Bug Reports & Feature Requests
 
 Please use the [issue tracker](https://github.com/mdziedzic/build-boilerplate-static-es6-sass/issues) to report any bugs or file feature requests.
 
-## License
+# License
 
 The code is available under the [MIT license](LICENSE.txt).
