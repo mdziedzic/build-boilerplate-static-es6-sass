@@ -8,9 +8,9 @@ This project was created to enable the easy, setup-free use of ES6 and SASS whil
 
 - Dev-server to aid development by automatically refreshing the browser whenever an edit is made to any of the source files.
 - Build script that:
-  - Minifies, concatenates, and bundles all JavaScript, SASS, and CSS files.
+  - Minifies, concatenates, and bundles all JavaScript and CSS files.
   - Converts all ES6 to browser friendly ES5.
-  - Parses SASS/CSS files and adds vendor prefixes to CSS rules.
+  - Converts SASS to CSS and adds vendor prefixes to CSS rules.
   - Compresses images.
 
 # Installation
@@ -27,7 +27,7 @@ npm install
 
 ## Development
 
-A sample static website is included in `source`. These files are meant to be replaced by your files. The only constraint is that there must be a `source/index.js` file. The rest of your files can be arranged in a directory structure within `source` to your liking.
+A sample static website is included in `source`. These files are meant to be replaced by your files. The only constraint is that there must be a `source/index.js` and `source/index.html` file. The rest of your files can be arranged in a directory structure within `source` to your liking.
 
 `npm run start` to start up the dev-server. You can view the site in a browser at: `http://localhost:8080`. As you edit the files in `source` your browser will be updated.
 
@@ -39,11 +39,11 @@ A sample static website is included in `source`. These files are meant to be rep
 
 ## JavaScript, SASS, CSS files
 
-This project uses Webpack which relies on a dependency graph. What this means as far as this project is concerned is that all JavaScript, SASS, and CSS files must be imported in `index.js` (or in files that can be accessed via `index.js`). Take a look at the sample included with the project at `source/index.js` for an example. 
+This project uses Webpack which relies on a dependency graph. What this means as far as this project is concerned is that all JavaScript, SASS, and CSS files must be imported in `index.js` (or in files that can be accessed via `index.js`). Take a look at the sample included with the project at `source/index.js` for an example of how to do this.
 
 ## HTML and images
 
-You don't need to do anything for the HTML and image files apart from placing them somewhere in `source`.
+You don't need to do anything for the HTML and image files apart from placing them somewhere in `source`. (Obviously images must be referenced by the HTML files and all HTML files must be accessible via `index.html`).
 
 ## Image Compression
 
@@ -58,6 +58,10 @@ Use the `browserslist` file to list what browsers your site supports. This affec
 ## Bug Reports & Feature Requests
 
 Please use the [issue tracker](https://github.com/mdziedzic/build-boilerplate-static-es6-sass/issues) to report any bugs or file feature requests.
+
+# Author
+
+Michael Dziedzic ([micaheldziedzic.com](http://michaeldziedzic.com))
 
 # License
 
