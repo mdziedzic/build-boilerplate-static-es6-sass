@@ -15,7 +15,7 @@ This project was created to enable the easy, setup-free use of ES6 and SASS whil
 
 # Installation
 
-The only development dependency of this project is [Node.js](https://nodejs.org). Once Node is installed, simply...
+The only development dependency of this project is [Node.js](https://nodejs.org). Once Node is installed:
 
 ```
 git clone https://github.com/mdziedzic/build-boilerplate-static-es6-sass.git
@@ -27,31 +27,31 @@ npm install
 
 ## Development
 
-Sample files are included in `source`. These files are meant to be replaced by your files. The only constraint is that there must be a `source/index.js` and `source/index.html` file. The rest of your files can be arranged in a directory structure within `source` to your liking.
+Sample files are included in `source`. These files are meant to be replaced. The only constraint is that there must be a `source/index.js` and `source/index.html` file. All other files only need be inside `source` (nested sub-directories allowed).
 
-`npm run start` to start up the dev-server. View your site as you develop in a browser at: `http://localhost:8080`. As you edit the files in `source` your browser will be updated.
+`npm run start` to start up the dev-server. View site under development at: `http://localhost:8080`. As files are edited in `source` the browser will be updated.
 
 ## Build
 
-`npm run build` to create a production build of your site in a `build` directory. This is a static build so it can be opened directly in your browser.
+`npm run build` to create a production build of the site in a `build` directory. This is a static build so it can be opened directly in a browser.
 
 # Notes
 
 ## JavaScript, SASS, CSS files
 
-This project uses Webpack which relies on a dependency graph. What this means as far as this project is concerned is that all JavaScript, SASS, and CSS files must be imported in `index.js` (or in files that can be accessed via `index.js`). Take a look at the sample included with the project at `source/index.js` for an example of how to do this.
+This project uses Webpack which relies on a dependency graph. What this means as far as this project is concerned is that all JavaScript, SASS, and CSS files must be imported in `index.js` (or in files that can be accessed via `index.js`). See the sample included with the project at `source/index.js` for an example of how to do this.
 
 ## HTML and images
 
-You don't need to do anything to your HTML and image files apart from placing them somewhere in `source`. (Obviously images must be referenced by the HTML files and all HTML files must be accessible via `index.html`).
+Nothing special needs to be don to HTML and image files apart from placing them somewhere in `source`. (Obviously images must be referenced by the HTML files and all HTML files must be accessible via `index.html`).
 
 ## Image Compression
 
-The build script compresses the images. If you do not want the images to be compressed when using `npm run build`, simply remove the `--compress` flag in the `postbuild` script in `package.json`.
+The build script compresses the images. To disable image compression when running `npm run build`, simply remove the `--compress` flag in the `postbuild` script in `package.json`.
 
 ## Supported Browsers
 
-Use the `browserslist` file to list what browsers your site supports. This affects what vendor prefixes get applied to your CSS, among other things. (See [https://github.com/ai/browserslist](https://github.com/ai/browserslist) for more information on how to use this file).
+Use the `browserslist` file to list what browsers the site supports. This affects what vendor prefixes get applied to the CSS, among other things. (See [https://github.com/ai/browserslist](https://github.com/ai/browserslist) for more information on how to use this file).
 
 # Contributing
 
