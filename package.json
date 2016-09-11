@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Boilerplate for building a static app/website with ES6 and SASS",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["build", "boilerplate", "sass", "es6", "es2015", "static", "transpilaton"],
   "author": {
     "name": "Michael Dziedzic",
     "url": "michaeldziedzic.com"
