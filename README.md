@@ -50,7 +50,7 @@ Nothing special needs to be done to HTML and image files apart from placing them
 The build script losslessly compresses the images. To disable image compression when running `npm run build`, simply remove the `--compress` flag in the `postbuild` script in `package.json`.
 
 ## Fonts
-To use a font from a CDN (like Google Fonts), place the `<link>` in the `<header>` of each HTML page that requires the font. Currently this project does not support adding custom fonts to the build.
+To use a font from a CDN (like Google Fonts), place the `<link>` in the `<header>` of each HTML page that requires the font. Local fonts that are included in `source` but are not referenced by a SCSS/CSS/JavaScript file will not be included in the build.
 
 ## Supported Browsers
 
