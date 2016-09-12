@@ -52,6 +52,9 @@ The build script losslessly compresses the images. To disable image compression 
 ## Fonts
 To use a font from a CDN (like Google Fonts), place the `<link>` in the `<header>` of each HTML page that requires the font. Local fonts that are included in `source` but are not referenced by a SCSS/CSS/JavaScript file will not be included in the build.
 
+## jQuery
+To use jQuery, first install it as a dependency: `npm install --save jquery`. Then include `import $ from 'jquery';` at the top every JavaScript file that uses jQuery.
+
 ## Supported Browsers
 
 Use the `browserslist` file to list supported browsers. This affects what vendor prefixes get applied to the CSS, among other things. (See [https://github.com/ai/browserslist](https://github.com/ai/browserslist) for more information on how to use this file).
