@@ -3,7 +3,14 @@ $green: #090;
 $blue: #00f;
 $radius: 30px;
 
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato-Regular.ttf');
+}
+
 p {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
   line-height: 1.75em;
 }
 
