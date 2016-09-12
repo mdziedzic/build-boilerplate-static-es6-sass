@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const processHTMLPages = require('./processHTMLHelper.js');
 const autoprefixer = require('autoprefixer');
 
-const extractCSS = new ExtractTextPlugin('./style/style.css');
+const extractCSS = new ExtractTextPlugin('style.css');
 const plugins = [
   extractCSS,
 ].concat(processHTMLPages());
@@ -22,7 +22,19 @@ module.exports = {
       },
       {
         test: [/\.scss$/i, /\.css$/],
-        loader: extractCSS.extract(['css?-minimize', 'postcss', 'sass']),
+        loader: extractCSS.extract('style-loader', 'css?-minimize!postcss!sass'),
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
+        query: {
+          name: '[path][name].[ext]',
+          context: './source',
+        },
       },
     ],
   },
@@ -31,11 +43,11 @@ module.exports = {
     extensions: ['', '.js', '.es6'],
   },
   output: {
-    path: `${__dirname}/build`,
+    path: './build',
     filename: 'index.js',
   },
   devServer: {
-    contentBase: `${__dirname}/source`,
+    contentBase: './source',
   },
   plugins,
 };
