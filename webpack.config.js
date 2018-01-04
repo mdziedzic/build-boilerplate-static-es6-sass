@@ -1,7 +1,6 @@
 require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const processHTMLPages = require('./processHTMLHelper.js');
-const autoprefixer = require('autoprefixer');
 
 const extractCSS = new ExtractTextPlugin('style.css');
 const plugins = [
@@ -14,36 +13,38 @@ module.exports = {
     './source/index.js',
   ],
   module: {
-    loaders: [
+    rules: [
+      {
+        test: [/\.scss$/i, /\.sass$/i, /\.css$/],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'postcss-loader', 'sass-loader']
+        })
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel'],
-      },
-      {
-        test: [/\.scss$/i, /\.css$/],
-        loader: extractCSS.extract('style-loader', 'css?-minimize!postcss!sass'),
+        loader: 'babel-loader'
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         query: {
           name: '[path][name].[ext]',
-          context: './source',
-        },
+          context: './source'
+        }
       },
     ],
   },
-  postcss: [autoprefixer()],
   resolve: {
-    extensions: ['', '.js', '.es6'],
+    extensions: ['.js', '.es6'],
   },
   output: {
-    path: './build',
+    path: __dirname + '/build',
     filename: 'index.js',
   },
   devServer: {
-    contentBase: './source',
+    contentBase: './source'
   },
   plugins,
 };
