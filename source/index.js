@@ -1,6 +1,7 @@
 // import $ from 'jquery'; Before using jQuery, install it with `npm install --save jquery`
 import './more-javascript/more.js';
-import './style/style.scss';
+import 'normalize.css'; // Note this
+import './style/style.sass';
 import './style/style.css';
 
 const saySomething = (something) => {
