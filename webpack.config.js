@@ -1,4 +1,6 @@
 require('webpack');
+
+const { argv } = require('yargs');
 const WebpackBar = require('webpackbar');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const processHTMLPages = require('./processHTMLHelper.js');
@@ -10,11 +12,15 @@ const plugins = [
   extractCSS,
 ].concat(processHTMLPages());
 
+const isProduction = !!((argv.env && argv.env.production) || argv.p);
+const entries = [ './source/index.js' ];
+
+if (! isProduction) {
+  entries.push('webpack-dev-server/client?http://localhost:8080');
+}
+
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    './source/index.js'
-  ],
+  entry: entries,
   module: {
     rules: [
       {
